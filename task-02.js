@@ -9,7 +9,7 @@ function partitionOn(pred, items) {
   items.length = 0;
   items.push(...fValue);
   items.push(...tValue);
-
+  
   return fValue.length;
 }
 
