@@ -11,6 +11,11 @@ function myCalc(num1, operator, num2) {
     '-': num1 - num2,
     '*': num1 * num2,
     '/': num1 / num2,
+    '**': num1 ** num2
+  }
+  console.log(2 ** 3)
+  if (num2 === 0) {
+    return 'You cannot divide by zero.';
   }
   
   if (isNaN(num1) || isNaN(num2)) {
@@ -31,5 +36,6 @@ function myCalc(num1, operator, num2) {
 myCalc(2, '*', 2); 
 myCalc('10', '/', 5);
 myCalc(10, '/', 5);
+myCalc(10, '/', 0);
 myCalc(NaN, '*', 2);
 myCalc(2, '~', 2); 

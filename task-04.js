@@ -8,4 +8,10 @@ function formatNumber(num) {
   return num.toFixed(2);
 }
 
-formatNumber(numObj); 
+function formatNumberWithPrecision(num, precision) {
+  const power = Math.pow(10, precision || 0);
+  return String(Math.round(num * power) / power);
+}
+
+formatNumber(numObj);
+formatNumberWithPrecision(numObj, 2); 
